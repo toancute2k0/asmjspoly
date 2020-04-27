@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Phần Logo */
+.header__content {
+    padding: 30px 0 15px;
+}
+.logo {
+    text-align: center;
+}
+.logo img {
+    width: 84px;
+    height: 84px;
+}
+.logo_text p {
+    max-width: 760px;
+    margin: 15px auto 0;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Baloo Da 2', cursive;
+}
+/* phần menu navbar */
+.navbar {
+    padding: 3px 0;
+}
+.wapper {
+    width: 1160px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: 'Baloo Da 2', cursive;
+    margin: 10px auto;
+}
+
+.wapper__navbar {
+    width: 600px;
+    height: 50px;
+    margin: 0 auto;  
+}
+.navbar__menu li {
+    display: inline-block;
+    list-style: none;
+    margin-top: 5px;
+}
+.navbar__menu li a {
+    padding: 0 27px;
+    margin: 0;
+    color: #151935;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 0;
+    text-decoration: none;
+    transition: 0.5s all;
+}
+.navbar__menu li a:hover {
+    color: #4AEADB;
+    transition: 0.5s all;
+}
+/* Phần nội dung của trang web */
+.content {
+    background-color: #F7F9FB;
+    padding: 70px 0px 0px;
+}
+/* content 1 */
+.content__one {
+    width: 880px;
+    height: 515px;
+    background-color: white;
+    padding: 40px 40px 60px;
+    border-radius: 0 0 4px 4px;
+    margin: 0 140px;
+    cursor: pointer;
+    box-shadow: 0 20px 150px rgba(51,73,90,.2);
+    position: relative;
+}
+.title_h1 {
+    width: 737px;
+    position: absolute;
+}
+.title_h1 h1 {
+    font-size: 56px;
+    text-align: center;
+    margin: 0px 0px 25px;
+}
+.title_p p {
+    padding: 10px 0px 0px;
+    font-size: 18px;
+}
+.content__one .title_p {
+    margin-top: 210px;
+}
+/* content 2 phần slide show */
+.wapper_content {
+    width: 880px;
+    background-color: white;
+    border-radius: 0 0 4px 4px;
+    margin: 0 140px;
+    position: relative;
+    cursor: pointer;
+    height: 504px;
+    box-shadow: 0 20px 150px rgba(51,73,90,.2);
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+.numbertext {
+    color: #ffffff;
+    font-size: 30px;
+    padding: 0px 18px;
+    position: absolute;
+    opacity: 60%;
+}
+.wapper_content img {
+    width: 880px;
+    height: 504px;
+    border-radius: 4px;
+}
+.prev__next {
+    position: absolute;
+    color: white;
+    font-size: 35px;
+    top: 44%;
+    padding-left: 6px;
+    transition: 0.6s all;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    display: none;
+    opacity: 60%;
+}
+.prev__next a:last-child {
+    margin-left: 816px;
+}
+.wapper_content:hover .prev__next {
+    display: block;
+    transition: 0.6s all;
+}
+/* content 3 from đăng nhập */
+.content__three {
+    width: 880px;
+    /* background-color: white; */
+    padding: 40px 40px 60px;
+    border-radius: 0 0 4px 4px;
+    margin: 0 140px;
+    position: relative;
+    cursor: pointer;
+    /* box-shadow: 0 20px 150px rgba(51,73,90,.2); */
+}
+/*  */
+.main__form {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: #FEFEFE;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 20px 150px #33495a33;    
+}
+.main__form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #332902;
+}
+.main__form .input__field {
+    margin-bottom: 8px;
+}
+.input__field input[type="text"],
+.input__field .radio__male,
+.input__field textarea,
+.input__field select,
+.input__field .select__hobby {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    font-family: 'Baloo Da 2', cursive;
+}
+.select__hobby label,
+.radio__male label {
+    margin-right: 25px;
+}
+.main__form textarea {
+    height: 80px;
+    resize: none;
+}
+.main__form .btn input[type="submit"] {
+    border: 0;
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background: #19E7B9;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.5s all;
+    box-shadow: 0 3px 30px 0 #33495a33;
+}
+.main__form .btn input[type="submit"]:hover {
+    background-color: #31CEAA;
+    transition: 0.5s all;
+}
+.main__form #error__message1 {
+    padding: 0px;
+    color: #fe8b8e;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+.main__form #error__message2 {
+    padding: 0px;
+    color: #fe8b8e;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+.main__form #error__message3 {
+    padding: 0px;
+    color: #fe8b8e;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+.main__form #error__message4 {
+    padding: 0px;
+    color: #fe8b8e;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+.main__form #error__message5 {
+    padding: 0px;
+    color: #fe8b8e;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+.main__form #error__message6 {
+    padding: 0px;
+    color: #fe8b8e;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+.main__form #error__message6 {
+    padding: 0px;
+    color: #fe8b8e;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+/* phaanf order */
+.wapper_orders {
+    width: 880px;
+    border-radius: 0 0 4px 4px;
+    margin: 0 140px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 20px 150px rgba(51,73,90,.2);
+}
+/* .main_table {
+    max-width: 880px;
+    background-color: #F4F7F8;
+    box-shadow: 0 20px 150px #33495a33;
+    font-family: 'Baloo Da 2', cursive;
+    border-radius: 1em;
+} */
+h1 {
+    height: 50px;
+    text-align: center;
+    color: #384047;
+}
+.custom_select {
+    height: 50px;
+    text-align: center;
+}
+.custom_select select {
+    background-color: #36304A;
+    color: white;
+    padding: 6px;
+    width: 250px;
+    border: none;
+    font-size: 18px;
+    box-shadow: 0 3px 20px 0 #6d66667e;
+    border-radius: 5px;
+    font-family: 'Baloo Da 2', cursive;
+}
+.our_table {
+    max-width: 880px;
+    text-align: center;
+    font-size: 18px;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.our_row {
+    display: flex;
+    width: 100%;  
+    transition: 300ms ease;
+}
+.one_cops {
+    background-color: #36304A;
+    color: white;
+    font-weight: bold;
+}
+
+.two_cops:hover {
+    background-color: #ddd;
+    transition: 300ms ease;
+}
+.two_cops:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+.two_cops:nth-child(even):hover {
+    background-color: #ddd;
+    transition: 300ms ease;
+}
+.cells1 {
+    flex: 200px;
+    padding:10px 20px;
+    height: 50px;
+}
+.cells2 {
+    flex: 200px;
+    padding:10px 20px;
+    height: 50px;
+}
+.cells3 {
+    flex: 200px;
+    padding:10px 20px;
+    height: 50px;
+}
+.cells4 {
+    flex: 200px;
+    padding:10px 20px;
+    height: 50px;
+}
+.cells5 {
+    flex: 200px;
+    padding:10px 20px;
+    height: 50px;
+}
+.cells6 {
+    flex: 200px;
+    padding:10px 20px;
+    height: 50px;
+}
+.cells7 {
+    flex: 200px;
+    padding:10px 20px;
+    height: 50px;
+}
+.cells8 {
+    flex: 200px;
+    padding:10px 20px;
+    height: 50px;
+}
+
+.our_row .container {
+    flex: 800px;
+    padding: 10px 20px;
+    height: 50px;
+    font-weight: bold;
+}
+.our_row .container1 {
+    flex: 200px;
+    padding: 10px 20px;
+    height: 50px;
+    font-weight: bold;
+}
+.our_row input[type="checkbox"] {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    outline: none;
+}
+.our_row input[type="number"] {
+    height: 30px;
+    width: 180px;
+    cursor: pointer;
+    border: none;
+    padding: 6px 0px 6px 6px;
+    font-size: 18px;
+    outline: none;
+    font-family: 'Baloo Da 2', cursive;
+}
+.our_row label {
+    font-weight: bold;
+}
+
+/* ///////////////////////////////////////// */
+.wapper_null {
+    background-color: #F7F9FB;
+    margin-top: 80px;
+}
+.wapper_null p {
+    opacity: 0;
+}
+/* phần footer cuối */
+.footer {
+    padding: 25px 0px ;
+}
+.wapper__footer {
+    text-align: center;
+    padding: 0px 25px;
+}

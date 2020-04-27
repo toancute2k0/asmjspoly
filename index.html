@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog My Home</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2:400,700&display=swap&subset=vietnamese" rel="stylesheet">
+        <script src="js/slide_show.js"></script>
+        <script src="js/validata.js"></script>
+        <script src="js/orders.js"></script>
+    </head>
+    <body>
+        <!-- phần header cho web -->
+        <div class="header">
+            <div class="header__content">
+                <div class="logo">
+                    <img src="img/logo.png">
+                </div>
+                <div class="logo_text">
+                    <p>Mỗi Ngày Vào Blog Là Một Niềm Vui</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- phần navbar chứa các menu -->
+        <div class="navbar">
+            <div class="wapper">
+                <div class="wapper__navbar">
+                    <ul class="navbar__menu">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#">BLOG</a></li>
+                        <li><a href="#">SIGN UP</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- phần nội dung web chứa nhìu thẻ div khác nhau -->
+        <div class="content">
+            <!-- phần content 1 lời chào -->
+            <div class="wapper">
+                <div class="content__one">
+                    <div class="title_h1">
+                        <h1>
+                            Chào Mừng Các Bạn Đến Với Blog Của Mình
+                        </h1>
+                    </div>
+                    <div class="title_p">
+                        <p>
+                            Mình tên là Trần Quốc Toản một cậu bé 2k đang tập tãnh bước vào con đường lập trình viên. Mình đang là Sinh viên năm nhất của trường cao đẳng FPT POLYTECHNIC nơi mà mình đăng từng bước từng bước tiến tới con đường đam mê của mình.
+                        </p>
+                        <p>
+                           Blog cá nhân này mình lập ra để chia sẻ những gì mình biết về Lập Trình, các tips thú vị, vọc vạch điện thoại, Photography. Hiện Web mới lập nên mình chưa có nhiều Idea Content. Nếu bạn có idea đừng ngần ngày mà hãy liên hệ ngay Fb cá nhân hay Gmail của mình để cuối Web. Yêu các bạn x en nờ lần luôn <3.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- phần content slide show -->
+            <div class="wapper">
+                <div class="wapper_content">
+                    <div id="number__img" class="numbertext"></div>
+                    <div class="prev__next">
+                        <a class="prev" onclick="prev()">&#10094;</a>
+                        <a class="next" onclick="next()">&#10095;</a>
+                    </div>
+                    <img id="imgs" src="img/0.jpg">
+                </div>
+            </div>
+
+            <!-- phần form đăng kí của web -->
+            <div class="wapper">
+                <div class="content__three">
+                    <div class="main__form">
+                        <h2>ĐĂNG KÍ</h2>
+                        <form id="myform" onsubmit="return validation()">
+                            <div class="input__field">
+                                <label>Mã Sinh Viên</label> <br>
+                                <input type="text" id="name" placeholder="Name">
+                                <div id="error__message1"></div>
+                            </div>
+                            <div class="input__field">
+                                <label>Họ Và Tên</label> <br>
+                                <input type="text" id="fullname" placeholder="Fullname">
+                                <p id="error__message2"></p>
+                            </div>
+                            <div class="input__field">
+                                <label>Email</label> <br>
+                                <input type="text" id="email" placeholder="email@gmail.com">
+                                <p id="error__message3"></p>
+                            </div>
+                            <div class="input__field">
+                                <label>Giới Tính </label> <br>
+                                <div class="radio__male" id="gioitinh">
+                                    <input type="radio" name="gioitinh" value="nam">
+                                    <label id="control">Nam</label>
+                                    <input type="radio" name="gioitinh" value="nu">
+                                    <label id="control">Nữ</label>
+                                </div>
+                                <p id="error__message4"></p>
+                            </div>
+                            <div class="input__field">
+                                <label>Sở Thích</label> <br>
+                                <div class="select__hobby" id="hobby">
+                                    <label ><input type="checkbox" name="hobby" value="thethao" > Thể Thao</label>
+                                    <label ><input type="checkbox" name="hobby" value="dulich" > Du Lịch</label>
+                                    <label ><input type="checkbox" name="hobby" value="amthuc" > Ẩm Thực</label>
+                                    <label ><input type="checkbox" name="hobby" value="khac" > Khác</label>
+                                </div>
+                                <p id="error__message5"></p>
+                            </div>
+                            <div class="input__field">
+                                <label id="control">Quốc Gia</label> <br>
+                                <select name="loai" id="loai">
+                                    <option value="rong">Chọn Quốc Tịch</option>
+                                    <option value="viet nam">Việt Nam</option>
+                                    <option value="trung quoc">Trung Quốc</option>
+                                    <option value="nhat ban">Nhật Bản</option>
+                                </select>
+                                <p id="error__message6"></p>
+                            </div>
+                            <div class="input__field">
+                                <label>Ghi Chú</label> <br>
+                                <textarea id="message" placeholder="message"></textarea>
+                                <p id="error__message7"></p>
+                            </div>
+                            <div class="btn">
+                                <input type="submit" value="Đăng Kí">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- phần orders sản phẩm -->
+            <div class="wapper">
+                <div class="wapper_orders">
+                    <div class="main_table">
+                        <h1>Bán Hàng</h1>
+                        <div class="custom_select">
+                            <select id="select_custom" onchange="showDiv(this)">
+                                <option value="0">Mức giá</option>
+                                <option value="1">100</option>
+                                <option value="2">300</option>
+                                <option value="3">500</option>
+                                <option value="4">700</option>
+                            </select>
+                        </div>
+                        <div class="our_table">
+                            <!-- line ////////////////////////////////////1 -->
+                            <div class="our_row one_cops"> 
+                                <div class="cells1" style="display: none;">
+                                    <input type="checkbox" id="parent" onchange="checkAll(this)">
+                                </div>
+                                <div class="cells1"  style="display: none;">Hàng Hóa</div>
+                                <div class="cells1"  style="display: none;">Đơn Gía</div>
+                                <div class="cells1"  style="display: none;">Số Lượng</div>
+                                <div class="cells1"  style="display: none;">Thành Tiền</div>
+                            </div>
+                            <!-- line ////////////////////////////////////2 -->
+                            <div class="our_row two_cops">
+                                <div class="cells1" style="display: none;">
+                                    <input type="checkbox" name="x" onclick="chonsp()">
+                                </div>
+                                <div class="cells1" name="tensp" data-price="90" style="display: none;">Bphone</div>
+                                <div class="cells1" name="gia" style="display: none;">90</div>
+                                <div class="cells1" style="display: none;">
+                                    <input name="soluong" type="number" min="0" value="0" disabled = true onchange="tinhtien()">
+                                </div>
+                                <div class="cells1" style="display: none;">
+                                    <label name="thanhtien">0</label>
+                                </div>
+                            </div>
+                            <!-- line ////////////////////////////////////3 -->
+                            <div class="our_row two_cops">
+                                <div class="cells1" style="display: none;">
+                                    <input type="checkbox" name="x" onclick="chonsp()">
+                                </div>
+                                <div class="cells1" name="tensp" data-price="100" style="display: none;">Nokia</div>
+                                <div class="cells1" name="gia" style="display: none;">100</div>
+                                <div class="cells1" style="display: none;">
+                                    <input name="soluong" type="number" min="0" value="0" disabled = true onchange="tinhtien()">
+                                </div>
+                                <div class="cells1" style="display: none;">
+                                    <label name="thanhtien">0</label>
+                                </div>
+                            </div>
+                            <!-- line ////////////////////////////////////4 -->
+                            <div class="our_row two_cops">
+                                <div class="cells1" style="display: none;">
+                                    <input type="checkbox" name="x" onclick="chonsp()">
+                                </div>
+                                <div class="cells1" name="tensp" style="display: none;">Motorola</div>
+                                <div class="cells1" name="gia" data-price="180" style="display: none;">180</div>
+                                <div class="cells1" style="display: none;">
+                                    <input name="soluong" type="number" min="0" value="0" disabled = true onchange="tinhtien()">
+                                </div>
+                                <div class="cells1" style="display: none;">
+                                    <label name="thanhtien">0</label>
+                                </div>
+                            </div>
+                            <!-- line ////////////////////////////////////5 -->
+                            <div class="our_row two_cops">
+                                <div class="cells1" style="display: none;">
+                                    <input type="checkbox" name="x" onclick="chonsp()">
+                                </div>
+                                <div class="cells1" name="tensp" style="display: none;">Samsung</div>
+                                <div class="cells1" name="gia" data-price="400" style="display: none;">400</div>
+                                <div class="cells1" style="display: none;">
+                                    <input name="soluong" type="number" min="0" value="0" disabled = true onchange="tinhtien()">
+                                </div>
+                                <div class="cells1" style="display: none;">
+                                    <label name="thanhtien">0</label>
+                                </div>
+                            </div>
+                            <!-- line ////////////////////////////////////6 -->
+                            <div class="our_row two_cops">
+                                <div class="cells1" style="display: none;">
+                                    <input type="checkbox" name="x" onclick="chonsp()">
+                                </div>
+                                <div class="cells1" name="tensp" style="display: none;">Sony Xperia</div>
+                                <div class="cells1" name="gia" data-price="450" style="display: none;">450</div>
+                                <div class="cells1" style="display: none;">
+                                    <input name="soluong" type="number" min="0" value="0" disabled = true onchange="tinhtien()">
+                                </div>
+                                <div class="cells1" style="display: none;">
+                                    <label name="thanhtien">0</label>
+                                </div>
+                            </div>
+                            <!-- line ////////////////////////////////////7 -->
+                            <div class="our_row two_cops">
+                                <div class="cells1" style="display: none;">
+                                    <input type="checkbox" name="x" onclick="chonsp()">
+                                </div>
+                                <div class="cells1" name="tensp" style="display: none;">Oppo</div>
+                                <div class="cells1" name="gia" data-price="600" style="display: none;">600</div>
+                                <div class="cells1" style="display: none;">
+                                    <input name="soluong" type="number" min="0" value="0" disabled = true onchange="tinhtien()">
+                                </div>
+                                <div class="cells1" style="display: none;">
+                                    <label name="thanhtien">0</label>
+                                </div>
+                            </div>
+                            <!-- line ////////////////////////////////////8-->
+                            <div class="our_row two_cops">
+                                <div class="cells1" style="display: none;">
+                                    <input type="checkbox" name="x" onclick="chonsp()">
+                                </div>
+                                <div class="cells1" name="tensp" style="display: none;">Iphone</div>
+                                <div class="cells1" name="gia" data-price="700" style="display: none;">700</div>
+                                <div class="cells1" style="display: none;">
+                                    <input name="soluong" type="number" min="0" value="0" disabled = true onchange="tinhtien()">
+                                </div>
+                                <div class="cells1" style="display: none;">
+                                    <label name="thanhtien">0</label>
+                                </div>
+                            </div>
+                            <!-- line ////////////////////////////////////9 -->
+                            <div class="our_row two_cops">
+                                <div class="container cells9" style="display: none;">Tổng</div>
+                                <div class="container1 cells9" style="display: none;">
+                                    <label id="sum-money">0</label>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- phần content null chờ update -->
+            <div class="wapper">
+                <div class="wapper_null">
+                    <p>`</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- phần cuối trang web -->
+        <div class="footer">
+            <div class="wapper">
+                <div class="wapper__footer">
+                    @copyright Trần Quốc Toản <br>
+                    Gmail: toantqpc00613@fpt.edu.vn <br>
+                    ĐT: 0822 576 436
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

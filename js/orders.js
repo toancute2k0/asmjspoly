@@ -3,35 +3,56 @@ function showDiv(select) {
     var x = document.getElementsByClassName("cells1");
     var y = document.getElementsByClassName("cells9");
         if (select.value == 1) {
-            for (var i = 0; i < 15; i++) {
-                x[i].style.display = "block";
-                y[0].style.display = "block";
-                y[1].style.display = "block";
+            for (var i = 0; i < x.length; i++) {
+                if (i < 15) {
+                    x[i].style.display = "block";
+                    y[0].style.display = "block";
+                    y[1].style.display = "block";
+                }
+                else {
+                    x[i].style.display = "none";
+                    y[0].style.display = "block";
+                    y[1].style.display = "block";
+                }
             }
         }
         else if (select.value == 2) {
-            for (var i = 0; i < 20; i++) {
-                x[i].style.display = "block";
-                y[0].style.display = "block";
-                y[1].style.display = "block";
+            for (var i = 0; i < x.length; i++) {
+                if (i < 20) {
+                    x[i].style.display = "block";
+                    y[0].style.display = "block";
+                    y[1].style.display = "block";
+                }
+                else {
+                    x[i].style.display = "none";
+                    y[0].style.display = "block";
+                    y[1].style.display = "block";
+                }
             }
         }
         else if (select.value == 3) {
-            for (var i = 0; i < 30; i++) {
-                x[i].style.display = "block";
-                y[0].style.display = "block";
-                y[1].style.display = "block";
+            for (var i = 0; i < x.length; i++) {
+                if (i < 30) {
+                    x[i].style.display = "block";
+                    y[0].style.display = "block";
+                    y[1].style.display = "block";
+                }
+                else {
+                    x[i].style.display = "none";
+                    y[0].style.display = "block";
+                    y[1].style.display = "block";
+                }
             }
         }
         else if (select.value == 4) {
-            for (var i = 0; i < 40; i++) {
+            for (var i = 0; i < x.length; i++) {
                 x[i].style.display = "block";
                 y[0].style.display = "block";
                 y[1].style.display = "block";
             }
         }
         else {
-            for (var i = 0; i < 40; i++) {
+            for (var i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
                 y[0].style.display = "none";
                 y[1].style.display = "none";

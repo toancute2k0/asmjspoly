@@ -1,10 +1,23 @@
+
 // load all ảnh lên
 var images = [];
     for (var i = 0; i < 5; i++) {
         images[i] = new Object();
         images[i].src="img/"+ i +".jpg";
     }
-var index = 0; // vị trí ảnh đang hiển thị
+var index = 0;
+var timer;
+function changeImg() {
+    index++;
+        if (index >= images.length) {
+            index = 0;
+        }
+    var anh = document.getElementById("imgs");
+    anh.src = images[index].src;
+    var soanh = document.getElementById("number__img");
+    soanh.innerHTML = (index + 1) +' / ' +images.length;
+    timer = setTimeout("changeImg()", 4000);
+}
 // next ảnh 
 function next() {
     index++;
@@ -14,9 +27,12 @@ function next() {
     var anh = document.getElementById("imgs");
     anh.src = images[index].src;
     var soanh = document.getElementById("number__img");
-    soanh.innerHTML = index+1+' / 5';
+    soanh.innerHTML = (index + 1) +' / ' +images.length;
 }
-setInterval("next()", 3500); // set time cho nó lặp
+
+// set time cho nó lặp
+// var myVar = setInterval("next()", 4000);
+
 // prev trở về trước
 function prev() {
     index--;
@@ -25,6 +41,18 @@ function prev() {
         }
     var anh = document.getElementById("imgs");
     anh.src = images[index].src;
-    var soanh = document.getElementById("soanh");
-    soanh.innerHTML = index+1+' / 5';
+    var soanh = document.getElementById("number__img");
+    soanh.innerHTML = (index + 1) +' / ' +images.length;
 }
+
+
+function stopShow() {
+    clearInterval(timer);
+}
+
+function runShow() {
+    changeImg();
+}
+
+window.onload = runShow;
+

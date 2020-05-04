@@ -3,8 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Blog My Home</title>
+        <title>Blog By Me</title>
+        <link rel="icon" href="img/logo.png">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
         <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2:400,700&display=swap&subset=vietnamese" rel="stylesheet">
         <script src="js/slide_show.js"></script>
         <script src="js/validata.js"></script>
@@ -28,11 +30,11 @@
             <div class="wapper">
                 <div class="wapper__navbar">
                     <ul class="navbar__menu">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                        <li><a href="#">BLOG</a></li>
-                        <li><a href="#">FEEDBACK</a></li>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="#one_wapper">ABOUT</a></li>
+                        <li><a href="#two_wapper">SLIDE SHOW</a></li>
+                        <li><a href="#three_wapper">SIGN UP</a></li>
+                        <li><a href="#four_wapper">ORDERS</a></li>
                     </ul>
                 </div>
             </div>
@@ -41,7 +43,7 @@
         <!-- phần nội dung web chứa nhìu thẻ div khác nhau -->
         <div class="content">
             <!-- phần content 1 lời chào -->
-            <div class="wapper">
+            <div class="wapper" id="one_wapper">
                 <div class="content__one">
                     <div class="title_h1">
                         <h1>
@@ -60,19 +62,19 @@
             </div>
 
             <!-- phần content slide show -->
-            <div class="wapper">
+            <div class="wapper" id="two_wapper">
                 <div class="wapper_content">
-                    <div id="number__img" class="numbertext"></div>
+                    <div id="number__img" class="numbertext">1 / 5</div>
                     <div class="prev__next">
-                        <a class="prev" onclick="prev()">&#10094;</a>
-                        <a class="next" onclick="next()">&#10095;</a>
+                        <a class="prev" onclick="prev()" onmouseover="stopShow()" onmouseout="runShow()">&#10094;</a>
+                        <a class="next" onclick="next()" onmouseover="stopShow()" onmouseout="runShow()">&#10095;</a>
                     </div>
                     <img id="imgs" src="img/0.jpg">
                 </div>
             </div>
 
             <!-- phần form đăng kí của web -->
-            <div class="wapper">
+            <div class="wapper" id="three_wapper">
                 <div class="content__three">
                     <div class="main__form">
                         <h2>ĐĂNG KÍ</h2>
@@ -136,7 +138,7 @@
             </div>
 
             <!-- phần orders sản phẩm -->
-            <div class="wapper">
+            <div class="wapper" id="four_wapper">
                 <div class="wapper_orders">
                     <div class="main_table">
                         <h1>Bán Hàng</h1>
@@ -288,5 +290,20 @@
                 </div>
             </div>
         </div>
+        <!-- icon scroll Top -->
+        <a href="#" class="to-top">
+            <i class="fas fa-angle-double-up"></i>
+        </a>
+        <script>
+            const toTop = document.querySelector(".to-top");
+            window.addEventListener ("scroll", () => {
+                if (window.pageYOffset > 390) {
+                    toTop.classList.add("active");
+                }
+                else {
+                    toTop.classList.remove("active");
+                }
+            })
+        </script>
     </body>
 </html>

@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
 /* Phần Logo */
 .header__content {
     padding: 30px 0 15px;
@@ -46,7 +50,7 @@
     margin-top: 5px;
 }
 .navbar__menu li a {
-    padding: 0 23px;
+    padding: 0 22px;
     margin: 0;
     color: #151935;
     line-height: 40px;
@@ -402,4 +406,23 @@ h1 {
 .wapper__footer {
     text-align: center;
     padding: 0px 25px;
+}
+
+/* scrollTop */
+.to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 32px;
+    font-size: 50px;
+    color: #1f1f1f;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s all;
+}
+
+.to-top.active {
+    bottom: 40px;
+    pointer-events: auto;
+    opacity: .6;
 }

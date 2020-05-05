@@ -7,17 +7,23 @@
 html {
     scroll-behavior: smooth;
 }
-/* Phần Logo */
+/*-----------------------------------------------
+                    Phần Logo 
+-----------------------------------------------*/
 .header__content {
     padding: 30px 0 15px;
 }
+
 .logo {
     text-align: center;
 }
+
 .logo img {
     width: 84px;
     height: 84px;
+    user-select: none;
 }
+
 .logo_text p {
     max-width: 760px;
     margin: 15px auto 0;
@@ -27,10 +33,14 @@ html {
     text-transform: uppercase;
     font-family: 'Baloo Da 2', cursive;
 }
-/* phần menu navbar */
+
+/*-----------------------------------------------
+                phần menu navbar 
+-----------------------------------------------*/
 .navbar {
     padding: 3px 0;
 }
+
 .wapper {
     width: 1160px;
     padding-left: 25px;
@@ -44,11 +54,13 @@ html {
     height: 50px;
     margin: 0 auto;  
 }
+
 .navbar__menu li {
     display: inline-block;
     list-style: none;
     margin-top: 5px;
 }
+
 .navbar__menu li a {
     padding: 0 22px;
     margin: 0;
@@ -61,16 +73,25 @@ html {
     text-decoration: none;
     transition: 0.5s all;
 }
+
 .navbar__menu li a:hover {
     color: #4AEADB;
     transition: 0.5s all;
 }
-/* Phần nội dung của trang web */
+
+/*-----------------------------------------------
+            Phần nội dung của trang web 
+-----------------------------------------------*/
+
 .content {
     background-color: #F7F9FB;
     padding: 70px 0px 0px;
 }
-/* content 1 */
+
+/*-----------------------------------------------
+            content 1
+-----------------------------------------------*/
+
 .content__one {
     width: 880px;
     height: 515px;
@@ -82,23 +103,31 @@ html {
     box-shadow: 0 20px 150px rgba(51,73,90,.2);
     position: relative;
 }
+
 .title_h1 {
     width: 737px;
     position: absolute;
 }
+
 .title_h1 h1 {
     font-size: 56px;
     text-align: center;
     margin: 0px 0px 25px;
 }
+
 .title_p p {
     padding: 10px 0px 0px;
     font-size: 18px;
 }
+
 .content__one .title_p {
     margin-top: 210px;
 }
-/* content 2 phần slide show */
+
+/*-----------------------------------------------
+            content 2 phần slide show
+-----------------------------------------------*/
+
 .wapper_content {
     width: 880px;
     background-color: white;
@@ -110,7 +139,9 @@ html {
     box-shadow: 0 20px 150px rgba(51,73,90,.2);
     margin-bottom: 80px;
     margin-top: 80px;
+    user-select: none;
 }
+
 .numbertext {
     color: #ffffff;
     font-size: 30px;
@@ -118,11 +149,13 @@ html {
     position: absolute;
     opacity: 60%;
 }
+
 .wapper_content img {
     width: 880px;
     height: 504px;
     border-radius: 4px;
 }
+
 .prev__next {
     position: absolute;
     color: white;
@@ -135,14 +168,20 @@ html {
     display: none;
     opacity: 60%;
 }
+
 .prev__next a:last-child {
     margin-left: 816px;
 }
+
 .wapper_content:hover .prev__next {
     display: block;
     transition: 0.6s all;
 }
-/* content 3 from đăng nhập */
+
+/*-----------------------------------------------
+            content 3 from đăng nhập
+-----------------------------------------------*/
+
 .content__three {
     width: 880px;
     /* background-color: white; */
@@ -153,6 +192,7 @@ html {
     cursor: pointer;
     /* box-shadow: 0 20px 150px rgba(51,73,90,.2); */
 }
+
 /*  */
 .main__form {
     max-width: 480px;
@@ -162,6 +202,7 @@ html {
     border-radius: 5px;
     box-shadow: 0 20px 150px #33495a33;    
 }
+
 .main__form h2 {
     text-align: center;
     margin-bottom: 10px;
@@ -169,9 +210,11 @@ html {
     letter-spacing: 3px;
     color: #332902;
 }
+
 .main__form .input__field {
     margin-bottom: 8px;
 }
+
 .input__field input[type="text"],
 .input__field .radio__male,
 .input__field textarea,
@@ -182,14 +225,17 @@ html {
     padding: 10px;
     font-family: 'Baloo Da 2', cursive;
 }
+
 .select__hobby label,
 .radio__male label {
     margin-right: 25px;
 }
+
 .main__form textarea {
     height: 80px;
     resize: none;
 }
+
 .main__form .btn input[type="submit"] {
     border: 0;
     margin-top: 15px;
@@ -204,54 +250,67 @@ html {
     cursor: pointer;
     transition: 0.5s all;
     box-shadow: 0 3px 30px 0 #33495a33;
+    font-family: 'Baloo Da 2', cursive;
+    outline: none;
 }
+
 .main__form .btn input[type="submit"]:hover {
     background-color: #31CEAA;
     transition: 0.5s all;
 }
+
 .main__form #error__message1 {
     padding: 0px;
     color: #fe8b8e;
     font-size: 14px;
     transition: all 0.5s ease;
 }
+
 .main__form #error__message2 {
     padding: 0px;
     color: #fe8b8e;
     font-size: 14px;
     transition: all 0.5s ease;
 }
+
 .main__form #error__message3 {
     padding: 0px;
     color: #fe8b8e;
     font-size: 14px;
     transition: all 0.5s ease;
 }
+
 .main__form #error__message4 {
     padding: 0px;
     color: #fe8b8e;
     font-size: 14px;
     transition: all 0.5s ease;
 }
+
 .main__form #error__message5 {
     padding: 0px;
     color: #fe8b8e;
     font-size: 14px;
     transition: all 0.5s ease;
 }
+
 .main__form #error__message6 {
     padding: 0px;
     color: #fe8b8e;
     font-size: 14px;
     transition: all 0.5s ease;
 }
+
 .main__form #error__message6 {
     padding: 0px;
     color: #fe8b8e;
     font-size: 14px;
     transition: all 0.5s ease;
 }
-/* phaanf order */
+
+/*-----------------------------------------------
+            phan orders
+-----------------------------------------------*/
 .wapper_orders {
     width: 880px;
     border-radius: 0 0 4px 4px;
@@ -261,6 +320,7 @@ html {
     border-radius: 5px;
     box-shadow: 0 20px 150px rgba(51,73,90,.2);
 }
+
 /* .main_table {
     max-width: 880px;
     background-color: #F4F7F8;
@@ -268,15 +328,18 @@ html {
     font-family: 'Baloo Da 2', cursive;
     border-radius: 1em;
 } */
+
 h1 {
     height: 50px;
     text-align: center;
     color: #384047;
 }
+
 .custom_select {
     height: 50px;
     text-align: center;
 }
+
 .custom_select select {
     background-color: #36304A;
     color: white;
@@ -288,6 +351,7 @@ h1 {
     border-radius: 5px;
     font-family: 'Baloo Da 2', cursive;
 }
+
 .our_table {
     max-width: 880px;
     text-align: center;
@@ -296,11 +360,13 @@ h1 {
     border-radius: 5px;
     overflow: hidden;
 }
+
 .our_row {
     display: flex;
     width: 100%;  
     transition: 300ms ease;
 }
+
 .one_cops {
     background-color: #36304A;
     color: white;
@@ -311,48 +377,58 @@ h1 {
     background-color: #ddd;
     transition: 300ms ease;
 }
+
 .two_cops:nth-child(even) {
     background-color: #f2f2f2; 
 }
+
 .two_cops:nth-child(even):hover {
     background-color: #ddd;
     transition: 300ms ease;
 }
+
 .cells1 {
     flex: 200px;
     padding:10px 20px;
     height: 50px;
 }
+
 .cells2 {
     flex: 200px;
     padding:10px 20px;
     height: 50px;
 }
+
 .cells3 {
     flex: 200px;
     padding:10px 20px;
     height: 50px;
 }
+
 .cells4 {
     flex: 200px;
     padding:10px 20px;
     height: 50px;
 }
+
 .cells5 {
     flex: 200px;
     padding:10px 20px;
     height: 50px;
 }
+
 .cells6 {
     flex: 200px;
     padding:10px 20px;
     height: 50px;
 }
+
 .cells7 {
     flex: 200px;
     padding:10px 20px;
     height: 50px;
 }
+
 .cells8 {
     flex: 200px;
     padding:10px 20px;
@@ -365,18 +441,21 @@ h1 {
     height: 50px;
     font-weight: bold;
 }
+
 .our_row .container1 {
     flex: 200px;
     padding: 10px 20px;
     height: 50px;
     font-weight: bold;
 }
+
 .our_row input[type="checkbox"] {
     height: 25px;
     width: 25px;
     cursor: pointer;
     outline: none;
 }
+
 .our_row input[type="number"] {
     height: 30px;
     width: 180px;
@@ -387,6 +466,7 @@ h1 {
     outline: none;
     font-family: 'Baloo Da 2', cursive;
 }
+
 .our_row label {
     font-weight: bold;
 }
@@ -399,10 +479,15 @@ h1 {
 .wapper_null p {
     opacity: 0;
 }
-/* phần footer cuối */
+
+/*-----------------------------------------------
+            FOOTER
+-----------------------------------------------*/
+
 .footer {
     padding: 25px 0px ;
 }
+
 .wapper__footer {
     text-align: center;
     padding: 0px 25px;

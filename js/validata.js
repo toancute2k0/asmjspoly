@@ -3,6 +3,7 @@ function validation () {
     // kiểm tra mã sinh viên
     var name = document.getElementById("name").value;
     var error__message1 = document.getElementById("error__message1");
+    var filter = /^(pc|PC)+([0-9]{5})$/;
         error__message1.style.padding = "4px 4px 4px 10px";
         if (name == "") {
             error__message1.innerHTML = "(*) Mã Sinh Viên không được để trống";
@@ -11,8 +12,16 @@ function validation () {
             return false;
         }
         else {
-            error__message1.innerHTML = "";
-            document.getElementById("name").style.backgroundColor = "white";
+            if (!filter.test(name)) {
+                error__message1.innerHTML = "(*) Mã Sinh Viên không hợp lệ vd: pc00613";
+                document.getElementById("name").style.backgroundColor = "yellow";
+                document.getElementById("name").focus();
+                return false;
+            }
+            else {
+                error__message1.innerHTML = "";
+                document.getElementById("name").style.backgroundColor = "white";
+            }
         }
 
     //kiem tra fullname sinh vien
@@ -111,4 +120,12 @@ function validation () {
         }
     //xuất ra câu chúc mừng
     alert("Chúc Mừng "+fullname+" Đã Đăng Kí Thành Công!");
+    
+    // swal({
+    //     title: "Good job!",
+    //     text: "You clicked the button!",
+    //     icon: "success",
+    //     button: "Aww yiss!",
+    //   });
+
 }

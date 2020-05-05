@@ -49,6 +49,7 @@ function showDiv(select) {
                 x[i].style.display = "block";
                 y[0].style.display = "block";
                 y[1].style.display = "block";
+                y[2].style.display = "block";
             }
         }
         else {
@@ -56,6 +57,7 @@ function showDiv(select) {
                 x[i].style.display = "none";
                 y[0].style.display = "none";
                 y[1].style.display = "none";
+                y[2].style.display = "block";
             }
         }
 }
@@ -65,6 +67,7 @@ function showDiv(select) {
     var b = document.getElementsByName("gia");
     var c = document.getElementsByName("soluong");
     var d = document.getElementsByName("thanhtien");
+    var e = document.getElementsByName("giamgia");
 
 // disabled tất cả các tick ko cho chọn
 function checkAll(e) {

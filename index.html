@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
         <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2:400,700&display=swap&subset=vietnamese" rel="stylesheet">
+        <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
         <script src="js/slide_show.js"></script>
         <script src="js/validata.js"></script>
         <script src="js/orders.js"></script>
@@ -66,8 +67,12 @@
                 <div class="wapper_content">
                     <div id="number__img" class="numbertext">1 / 5</div>
                     <div class="prev__next">
-                        <a class="prev" onclick="prev()" onmouseover="stopShow()" onmouseout="runShow()">&#10094;</a>
-                        <a class="next" onclick="next()" onmouseover="stopShow()" onmouseout="runShow()">&#10095;</a>
+                        <a class="prev" onclick="prev()" 
+                            onmouseover="stopShow()" onmouseout="setTimeout(runShow, 2000);">&#10094;
+                        </a>
+                        <a class="next" onclick="next()" 
+                            onmouseover="stopShow()" onmouseout="setTimeout(runShow, 2000);">&#10095;
+                        </a>
                     </div>
                     <img id="imgs" src="img/0.jpg">
                 </div>
@@ -81,7 +86,7 @@
                         <form id="myform" onsubmit="return validation()">
                             <div class="input__field">
                                 <label>Mã Sinh Viên</label> <br>
-                                <input type="text" id="name" placeholder="Name">
+                                <input type="text" id="name" placeholder="PCXXXXX">
                                 <div id="error__message1"></div>
                             </div>
                             <div class="input__field">
@@ -145,10 +150,10 @@
                         <div class="custom_select">
                             <select id="select_custom" onchange="showDiv(this)">
                                 <option value="0">Mức giá</option>
-                                <option value="1">100</option>
-                                <option value="2">300</option>
-                                <option value="3">500</option>
-                                <option value="4">700</option>
+                                <option value="1">0 - 100$</option>
+                                <option value="2">0 - 300$</option>
+                                <option value="3">0 - 500$</option>
+                                <option value="4">0 - 700$</option>
                             </select>
                         </div>
                         <div class="our_table">
@@ -266,7 +271,14 @@
                                 <div class="container1 cells9" style="display: none;">
                                     <label id="sum-money">0</label>
                                 </div>
-                            </div>   
+                            </div>
+                            <!-- line ////////////////////////////////////9 -->
+                            <div class="our_row two_cops">
+                                <div class="container cells9" style="display: none;">
+                                    <input type="text" name="giamgia">
+                                    <input type="submit" value="Áp dụng" onclick="tinhtien()">
+                                </div>
+                            </div>  
                         </div>
                     </div>
                 </div>
@@ -290,6 +302,7 @@
                 </div>
             </div>
         </div>
+        
         <!-- icon scroll Top -->
         <a href="#" class="to-top">
             <i class="fas fa-angle-double-up"></i>

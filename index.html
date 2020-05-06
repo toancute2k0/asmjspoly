@@ -32,10 +32,10 @@
                 <div class="wapper__navbar">
                     <ul class="navbar__menu">
                         <li><a href="index.html">HOME</a></li>
-                        <li><a href="#one_wapper">ABOUT</a></li>
-                        <li><a href="#two_wapper">SLIDE SHOW</a></li>
-                        <li><a href="#three_wapper">SIGN UP</a></li>
-                        <li><a href="#four_wapper">ORDERS</a></li>
+                        <li><a href="#one_wapper" class="navbar__link">ABOUT</a></li>
+                        <li><a href="#two_wapper" class="navbar__link">SLIDE SHOW</a></li>
+                        <li><a href="#three_wapper" class="navbar__link">SIGN UP</a></li>
+                        <li><a href="#four_wapper" class="navbar__link">ORDERS</a></li>
                     </ul>
                 </div>
             </div>
@@ -275,8 +275,8 @@
                             <!-- line ////////////////////////////////////9 -->
                             <div class="our_row two_cops">
                                 <div class="container cells9" style="display: none;">
-                                    <input type="text" name="giamgia">
-                                    <input type="submit" value="Áp dụng" onclick="tinhtien()">
+                                    <input type="text" id="giamgia">
+                                    <input type="button" value="Áp dụng" onclick="tinhtien(this)">
                                 </div>
                             </div>  
                         </div>
@@ -304,19 +304,12 @@
         </div>
         
         <!-- icon scroll Top -->
-        <a href="#" class="to-top">
-            <i class="fas fa-angle-double-up"></i>
-        </a>
-        <script>
-            const toTop = document.querySelector(".to-top");
-            window.addEventListener ("scroll", () => {
-                if (window.pageYOffset > 390) {
-                    toTop.classList.add("active");
-                }
-                else {
-                    toTop.classList.remove("active");
-                }
-            })
-        </script>
+        <div class="to-top">
+            <i class="fas fa-arrow-circle-up"></i>
+        </div>
+        <!-- Get a specific version -->
+        <!-- <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script> -->
+
+        <script src="js/scrolltop.js"></script>
     </body>
 </html>

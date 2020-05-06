@@ -67,7 +67,6 @@ function showDiv(select) {
     var b = document.getElementsByName("gia");
     var c = document.getElementsByName("soluong");
     var d = document.getElementsByName("thanhtien");
-    var e = document.getElementsByName("giamgia");
 
 // disabled tất cả các tick ko cho chọn
 function checkAll(e) {
@@ -103,18 +102,54 @@ function chonsp() {
         }
     }
 }
-
 // tính thành tiền và tổng tiền
-function tinhtien() {
+// function tinhtien(w) {
+//     var tongtien = 0;
+//         for (var i = 0; i < c.length; i++) {
+//             if (c[i].disabled == false) {
+//                 var soluong = c[i].value;
+//                 var gia = b[i].innerHTML;
+//                 var tong = (Number(soluong) * Number(gia));
+//                 d[i].innerHTML = tong;
+//                 tongtien += tong;
+//             }
+//         }
+//     document.getElementById("sum-money").innerText = tongtien;
+// }
+
+// function tinhtien(w) {
+//     var tongtien = 0;
+//   var e = document.getElementById("giamgia").value;
+//         for (var i = 0; i < c.length; i++) {
+//                 var soluong = c[i].value;
+//                 var gia = b[i].innerHTML;
+//                 var tong = (Number(soluong) * Number(gia));
+//                 d[i].innerHTML = tong;
+//                 tongtien += tong;
+//         }
+//     if(e){
+//          var sale = tongtien - (tongtien * (Number(e)/100));
+//          tongtien -=   sale   ;
+//      }
+          
+//     document.getElementById("sum-money").innerText = tongtien;
+// }
+
+function tinhtien(w) {
     var tongtien = 0;
-    for (var i = 0; i < c.length; i++) {
-        if (c[i].disabled == false) {
-            var soluong = c[i].value;
-            var gia = b[i].innerHTML;
-            var tong = Number(soluong) * Number(gia);
-            d[i].innerHTML = tong;
-            tongtien += tong;
+        for (var i = 0; i < c.length; i++) {
+            if (c[i].disabled == false) {
+                var soluong = c[i].value;
+                var gia = b[i].innerHTML;
+                var tong = (Number(soluong) * Number(gia));
+                d[i].innerHTML = tong;
+                tongtien += tong;
+            }
         }
-    }
+        if (w && w.onclick) {
+                    var e = document.getElementById("giamgia").value;
+                    var sale = tongtien - (tongtien * (Number(e)/100));
+                        tongtien -= sale;
+                }
     document.getElementById("sum-money").innerText = tongtien;
 }
